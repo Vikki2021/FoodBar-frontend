@@ -21,7 +21,7 @@ export default function Cart() {
 
     try {
       let response = await axios.post(
-        "http://localhost:5000/api/auth/orderData",
+        "http://foodbar-backend-3.onrender.com/api/auth/orderData",
         {
           order_data: data,
           email: userEmail,
