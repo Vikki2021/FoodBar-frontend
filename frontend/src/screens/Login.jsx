@@ -20,7 +20,7 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://foodbar-backend-3.onrender.com/api/auth/login",
+        "https://foodbar-backend-3.onrender.com/api/auth/login",
         data,
         {
           headers: { "Content-Type": "application/json" },

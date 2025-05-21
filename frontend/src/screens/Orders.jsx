@@ -28,7 +28,7 @@ const Orders = () => {
       }
 
       const response = await axios.get(
-        "http://foodbar-backend-3.onrender.com/api/auth/orders",
+        "https://foodbar-backend-3.onrender.com/api/auth/orders",
         {
           params: { email },
         }
