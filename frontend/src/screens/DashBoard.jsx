@@ -23,6 +23,7 @@ export default function HomePage() {
         className="d-flex align-items-center justify-content-center text-center text-white py-5"
         style={{
           minHeight: "calc(100vh - 120px)", // Adjust based on navbar/footer height to fill viewport
+          paddingLeft:"100px",
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1570560258879-af7f8e1447ac?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D')`, // Dynamic Indian food/restaurant background
           //   backgroundSize: 'cover',
           backgroundPosition: "center",
@@ -77,7 +78,6 @@ export default function HomePage() {
                 className="img-fluid"
                 style={{
                   //   maxWidth: '100%', // Adjust size
-                  marginLeft: "150px",
                   height: "500px",
                   filter: "drop-shadow(0 5px 15px rgba(0,0,0,0.6))", // Add a shadow to make it pop
                 }}
