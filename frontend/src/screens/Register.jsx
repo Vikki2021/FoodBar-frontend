@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import "../styles/style.css"; // We'll rely more on inline styles and Bootstrap now
+// import "../styles/style.css";
 
 function Register() {
   const [data, setData] = useState({
@@ -26,7 +26,7 @@ function Register() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://foodbar-backend-3.onrender.com/api/auth/register",
+        "http://localhost:5000/api/auth/register",
         data,
         {
           headers: { "Content-Type": "application/json" },
@@ -80,35 +80,43 @@ function Register() {
     <div
       className="d-flex justify-content-center align-items-center"
       style={{
-        minHeight: '100vh',
-        background: '#212529', // Dark background matching Navbar
-        color: '#f8f9fa', // Light text for page
-        fontFamily: 'Montserrat, sans-serif',
-        paddingTop: '80px', // Space for fixed Navbar
-        paddingBottom: '20px' // Add some padding at the bottom
+        minHeight: "100vh",
+        background: "#212529", // Dark background matching Navbar
+        color: "#f8f9fa", // Light text for page
+        fontFamily: "Montserrat, sans-serif",
+        paddingTop: "80px", // Space for fixed Navbar
+        paddingBottom: "20px", // Add some padding at the bottom
       }}
     >
       <form
         onSubmit={handleSubmit}
         className="p-4 shadow-lg" // Bootstrap padding and shadow
         style={{
-          width: '100%',
-          maxWidth: '400px', // Max width for the form card
-          backgroundColor: '#343a40', // Slightly lighter dark for the form card
-          borderRadius: '10px',
-          border: 'none',
-          color: '#f8f9fa' // Light text inside the form card
+          width: "100%",
+          maxWidth: "400px", // Max width for the form card
+          backgroundColor: "#343a40", // Slightly lighter dark for the form card
+          borderRadius: "10px",
+          border: "none",
+          color: "#f8f9fa", // Light text inside the form card
         }}
       >
-        <h2 className="text-center text-warning mb-4"
-          style={{ fontFamily: 'Pacifico, cursive', textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}
+        <h2
+          className="text-center text-warning mb-4"
+          style={{
+            fontFamily: "Pacifico, cursive",
+            textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
+          }}
         >
           Register
         </h2>
 
         {/* name */}
-        <div className="mb-3"> {/* Bootstrap margin-bottom */}
-          <label htmlFor="name" className="form-label">Name</label>
+        <div className="mb-3">
+          {" "}
+          {/* Bootstrap margin-bottom */}
+          <label htmlFor="name" className="form-label">
+            Name
+          </label>
           <input
             type="text"
             className="form-control" // Bootstrap form control
@@ -119,16 +127,20 @@ function Register() {
             onChange={handleChange}
             required
             style={{
-              backgroundColor: '#495057', // Darker input background
-              color: '#f8f9fa', // Light text for input
-              borderColor: '#495057' // Darker border
+              backgroundColor: "#495057", // Darker input background
+              color: "#f8f9fa", // Light text for input
+              borderColor: "#495057", // Darker border
             }}
           />
         </div>
 
         {/* Email */}
-        <div className="mb-3"> {/* Bootstrap margin-bottom */}
-          <label htmlFor="email" className="form-label">Email address</label>
+        <div className="mb-3">
+          {" "}
+          {/* Bootstrap margin-bottom */}
+          <label htmlFor="email" className="form-label">
+            Email address
+          </label>
           <input
             type="email"
             className="form-control" // Bootstrap form control
@@ -139,16 +151,20 @@ function Register() {
             onChange={handleChange}
             required
             style={{
-              backgroundColor: '#495057', // Darker input background
-              color: '#f8f9fa', // Light text for input
-              borderColor: '#495057' // Darker border
+              backgroundColor: "#495057", // Darker input background
+              color: "#f8f9fa", // Light text for input
+              borderColor: "#495057", // Darker border
             }}
           />
         </div>
 
         {/* Password */}
-        <div className="mb-3"> {/* Bootstrap margin-bottom */}
-          <label htmlFor="password" className="form-label">Password</label>
+        <div className="mb-3">
+          {" "}
+          {/* Bootstrap margin-bottom */}
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
           <input
             type="password"
             className="form-control" // Bootstrap form control
@@ -159,16 +175,20 @@ function Register() {
             onChange={handleChange}
             required
             style={{
-              backgroundColor: '#495057', // Darker input background
-              color: '#f8f9fa', // Light text for input
-              borderColor: '#495057' // Darker border
+              backgroundColor: "#495057", // Darker input background
+              color: "#f8f9fa", // Light text for input
+              borderColor: "#495057", // Darker border
             }}
           />
         </div>
 
         {/* Location */}
-        <div className="mb-3"> {/* Bootstrap margin-bottom */}
-          <label htmlFor="location" className="form-label">Location</label>
+        <div className="mb-3">
+          {" "}
+          {/* Bootstrap margin-bottom */}
+          <label htmlFor="location" className="form-label">
+            Location
+          </label>
           <input
             type="text"
             className="form-control" // Bootstrap form control
@@ -179,9 +199,9 @@ function Register() {
             onChange={handleChange}
             required
             style={{
-              backgroundColor: '#495057', // Darker input background
-              color: '#f8f9fa', // Light text for input
-              borderColor: '#495057' // Darker border
+              backgroundColor: "#495057", // Darker input background
+              color: "#f8f9fa", // Light text for input
+              borderColor: "#495057", // Darker border
             }}
           />
         </div>
@@ -189,16 +209,27 @@ function Register() {
         <button
           type="submit"
           className="btn btn-warning w-100 fw-bold mt-3" // Bootstrap button, full width, bold, margin-top
-          style={{ transition: 'all 0.3s ease-in-out' }}
-          onMouseOver={e => {e.currentTarget.style.backgroundColor='#e0a800';}} // Darker yellow on hover
-          onMouseOut={e => {e.currentTarget.style.backgroundColor='#ffc107';}} // Original yellow on mouse out
+          style={{ transition: "all 0.3s ease-in-out" }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = "#e0a800";
+          }} // Darker yellow on hover
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = "#ffc107";
+          }} // Original yellow on mouse out
         >
           Register
         </button>
 
-        <div className="text-center mt-3"> {/* Bootstrap text center, margin-top */}
-          <p className="mb-0"> {/* Remove default paragraph margin */}
-            Already registered? <Link to="/login" className="text-warning text-decoration-none">Login</Link>
+        <div className="text-center mt-3">
+          {" "}
+          {/* Bootstrap text center, margin-top */}
+          <p className="mb-0">
+            {" "}
+            {/* Remove default paragraph margin */}
+            Already registered?{" "}
+            <Link to="/login" className="text-warning text-decoration-none">
+              Login
+            </Link>
           </p>
         </div>
       </form>
