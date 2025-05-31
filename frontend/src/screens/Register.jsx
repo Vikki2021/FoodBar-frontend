@@ -26,7 +26,7 @@ function Register() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://foodbar-backend-3.onrender.com/api/auth/register",
         data,
         {
           headers: { "Content-Type": "application/json" },

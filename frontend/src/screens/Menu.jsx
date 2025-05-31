@@ -29,12 +29,15 @@ export default function Menu() {
 
   const loadFoodItems = async () => {
     try {
-      let response = await fetch("http://localhost:5000/api/auth/foodData", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      let response = await fetch(
+        "https://foodbar-backend-3.onrender.com/api/auth/foodData",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       response = await response.json();
       setFoodItems(response[0]);
       setFoodCat(response[1]);
